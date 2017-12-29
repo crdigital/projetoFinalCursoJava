@@ -1,0 +1,31 @@
+ 
+ Instalação em ambiente Linux
+ ============================
+
+ 1 - Faça seu login no phpmyadmin, crie uma base de dados com nome 'agenda'
+     e importe o arquivo 'agenda.sql' para criar a tabela contato e popular seus campos.
+
+ 2 - Abra o terminal de comandos do linux com ctrl + alt + t navegue até a pasta onde se encontra o conector 
+     mysql. digite: 'sudo cp mysql-connector-java-5.1.32-bin.jar /usr/lib/jvm/java-8-oracle/jre/lib/ext'
+     Vai ser preciso digitar a senha de root. No comando anterior considera-se que esteja com o java 8 da oracle instalado. 
+     se for outra versão tipo 6 ou 7, ou o open jdk terá que alterar o nome da pasta.
+
+3 -  Na pasta appContato, entre em src/init/ e edite o arquivo FabricaConexao.java, e altere os valores de usuario
+     e senha caso estejam diferentes o seu usuário e senha de acesso as bases MySQL.
+
+4 - Dentro da pasta appContato abre um terminal de comandos e digite, 'javac src/init/*.java -d bin/' para compilar os arquivos java.
+
+5 - Acesse a pasta bin e digite no terminal 'java init.Main' para abrir e utilizar o programa.
+
+
+ Instalação em ambiente Windows
+ ============================== 
+
+ Para utilizar o programa em ambiente Windows é praticamente a mesma coisa, vai mudar só a pasta onde o Mysql conector deverá ser
+ copiado. Um exemplo de um computador com Windows 7 instalado seria: 'C:\Program Files\java\jre1.8.0_131\lib\ext\'
+
+ 
+ 
+ Obs: Foram colocadas duas pastas dentro da pasta appContato. Uma contendo arquivos para compilação e execução no ambiente Linux 
+      e outra para o ambiente Windows. Recomendado recompilar e executar no ambiente desejado.
+
